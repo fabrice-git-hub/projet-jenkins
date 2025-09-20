@@ -28,7 +28,7 @@ pipeline {
                         docker run --rm -dp $HOST_PORT:$CONTAINER_PORT --name $IMAGE_NAME $IMAGE_NAME:$IMAGE_TAG
                         sleep 5
                         curl -I http://$IP_DOCKER:8080
-                        sleep
+                        sleep 5
                         docker stop $IMAGE_NAME
 
                     '''
