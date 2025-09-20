@@ -5,7 +5,7 @@ pipeline {
         DOCKER_PASSWORD = credentials('docker-password')
         DOCKER_USERNAME = 'ulukai31130'
         HOST_PORT = 80
-        CONTAINER_PORT = 80
+        CONTAINER_PORT = 8080
         IP_DOCKER = '172.17.0.2'
 
     }
@@ -27,7 +27,7 @@ pipeline {
                     sh '''
                         docker run --rm -dp $HOST_PORT:$CONTAINER_PORT --name $IMAGE_NAME $IMAGE_NAME:$IMAGE_TAG
                         sleep 5
-                        curl -I http://$IP_DOCKER
+                        curl -I http://$IP_DOCKER:8080
                         sleep
                         docker stop $IMAGE_NAME
 
