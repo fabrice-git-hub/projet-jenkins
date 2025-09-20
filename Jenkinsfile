@@ -6,7 +6,7 @@ pipeline {
         DOCKER_USERNAME = 'ulukai31130'
         HOST_PORT = 80
         CONTAINER_PORT = 80
-        IP_DOCKER = '172.17.0.1'
+        IP_DOCKER = '172.17.0.2'
 
     }
     agent any
